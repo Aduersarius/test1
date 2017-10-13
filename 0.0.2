@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a[10], b, c ,d;
+    cin >> a[0] >>a[1] >>a[2] >>a[3] >>a[4] >>a[5] >>a[6] >>a[7] >>a[8]>> a[9];
+    cin >> b;
+    for (int i = 0; i < 10; i++){
+        for (int u = 0; u < 10; u++){
+            if (a[i] + a[u] == b) {
+                c = a[i];
+                d = a[u];
+            }
+        }
+    }
+    cout << c << ' ' << d << endl;
+    return 0;
+}
