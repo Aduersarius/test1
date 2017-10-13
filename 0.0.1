@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char a;
+    while ( cin.get(a))
+    {if ( isspace(a)) { cin.putback('%20'); }
+    else {cin.putback(a);}}
+    cout << a;
+    return 0; }
