@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	cout << "Enter first string:";
+	int a[10], b[10], c[20], fail = 0;
+	cin >> a[0] >> a[1] >> a[2] >> a[3] >> a[4] >> a[5] >> a[6] >> a[7] >> a[8] >> a[9];
+	cout << "Enter second string:";
+	cin >> b[0] >> b[1] >> b[2] >> b[3] >> b[4] >> b[5] >> b[6] >> b[7] >> b[8] >> b[9];
+	for (int i = 1; i < 10; i++) {
+		if (a[i] < a[i - 1]) { fail = 1; }
+	}
+	for (int i = 1; i < 10; i++) {
+		if (b[i] < b[i - 1]) { fail = 1; }
+	}
+	if (fail = 0) {
+		for (int i = 0; i < 10; i++) {
+			if (a[i] < b[i]) {
+				c[2 * i] = a[i];
+				c[2 * i + 1] = b[i];
+			}
+		}
+		for (int i = 0; i < 20; i++) {
+			cout << c[i] << ' ';
+		}
+	}
+	else {
+		cout << "An error has occurred while reading the input sequence.";
+	}
+	return 0;
+}
